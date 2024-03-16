@@ -778,12 +778,32 @@ li {
         font-size: 16px;
     }
 
+    .cont03 .inner .list .item .txt .price .cost {
+        font-size: 14px;
+    }
+
+    .cont03 .inner .list .item .txt .price .discount {
+        font-size: 12px;
+    }
+
     .cont04 .inner {
         gap:30px
     }
     .cont04 .inner .round_item figure {
         width: 100px;
         height: 100px;
+    }
+
+    .cont04 .inner .round_item>p {
+        font-size: 13px;
+    }
+
+    .footer .footer_info ul {
+        flex-direction: column;
+    }
+
+    .footer .footer_info ul li:nth-child(2):before {
+        display: none;
     }
 
     .footer .footer_info address p:nth-child(2):before {
@@ -797,5 +817,13 @@ li {
     }
     .footer>p {
         font-size: 10px;
+    }
+
+    .footer .footer_info ul li:first-child {
+        padding-right: 5px;
+    }
+
+    .footer .footer_info address p:nth-child(3):before {
+        display: none;
     }
 }
