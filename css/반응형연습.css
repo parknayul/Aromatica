@@ -382,9 +382,17 @@ li {
     padding-right: 15px;
 }
 
-.cont03 .inner .list .item .txt .price span {
+.cont03 .inner .list .item .txt .price .cost {
     color: #FF4A4A;
-    font-size: 25px;
+    font-size: 16px;
+    color: #5f5f5f;
+    text-decoration: line-through;
+}
+
+.cont03 .inner .list .item .txt .price .discount {
+    font-size: 16px;
+    color: #FF4A4A;
+    margin-left: 5px;
 }
 
 /* ======================cont04⭐ */
@@ -471,7 +479,15 @@ li {
     font-size: 13px;
 }
 
+.footer .footer_info address p:nth-child(2) {
+    padding-right: 10px;
+}
+
 .footer .footer_info address p:nth-child(2):before {
+    content: '|';
+    padding-right: 10px;
+}
+.footer .footer_info address p:nth-child(3):before {
     content: '|';
     padding-right: 10px;
 }
