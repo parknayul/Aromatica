@@ -374,7 +374,8 @@ li {
 }
 
 .cont03 .inner .list .item .txt h4 {
-    margin-bottom: 16px;
+    padding-bottom: 16px;
+    height: 50px;
 }
 
 .cont03 .inner .list .item .txt .price strong {
