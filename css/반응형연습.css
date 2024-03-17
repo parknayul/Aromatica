@@ -396,6 +396,52 @@ li {
     margin-left: 5px;
 }
 
+.cont03 .inner .list .item .btn_wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cont03 .inner .list .item button {
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    border: 0;
+    background-color: transparent;
+    vertical-align: middle;
+}
+
+.cont03 .inner .list .item .up {
+    position: absolute;
+    right: 0;
+}
+
+.cont03 .inner .list .item .down {
+    position: absolute;
+    left: 0;
+    
+}
+
+.cont03 .inner .list .item .btn{
+    position: relative;
+    background-color: #ffffff65;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid #333;
+}
+
+.cont03 .inner .list .item .icon {
+    margin-left: 1rem;
+}
+
+.cont03 .inner .list .item .icon img {
+    height: 25px;
+}
+
 /* ======================cont04⭐ */
 .cont04 {
     margin: 160px 0;
@@ -786,6 +832,10 @@ li {
         font-size: 12px;
     }
 
+    .cont03 .inner .list .item .icon img {
+        height: 20px;
+    }
+
     .cont04 .inner {
         gap:30px
     }
@@ -800,6 +850,10 @@ li {
 
     .footer .footer_info ul {
         flex-direction: column;
+    }
+
+    .footer .footer_info ul li {
+        padding-top: 0.5rem;
     }
 
     .footer .footer_info ul li:nth-child(2):before {
