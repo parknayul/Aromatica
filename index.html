@@ -10,6 +10,12 @@
     <script src="lib/jquery-3.7.1.min.js"></script>
     <script>
         $(function () {
+            //링크방지
+            $('a').click(function (e) {
+                e.preventDefault();
+            });//a.click
+
+            //증감,감소
             $('.item').each(function () {
                 let btn_wrap = $(this).find('.btn');
                 let downBtn = btn_wrap.find('.down');
