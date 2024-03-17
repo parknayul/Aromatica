@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aromatica</title>
     <link rel="stylesheet" href="css/반응형연습.css">
 
+    <script src="lib/jquery-3.7.1.min.js"></script>
     <script>
-        window.onload = () => {
-            let box = document.getElementsByClassName('box')[0];
-            let leftBtn = box.getElementsByClassName('fa-arrow-left')[0];
-            let rightBtn = box.getElementsByClassName('fa-arrow-right')[0];
-            let boxImage = box.getElementsByTagName('img')[0];
-            let btn_wrap = document.getElementsByClassName('btn')[0];
-            let downBtn = btn_wrap.getElementsByClassName('down')[0];
-            let upBtn = btn_wrap.getElementsByClassName('up')[0];
-            let num = btn_wrap.getElementsByClassName('num')[0];
+        $(function () {
+            $('.item').each(function () {
+                let btn_wrap = $(this).find('.btn');
+                let downBtn = btn_wrap.find('.down');
+                let upBtn = btn_wrap.find('.up');
+                let num = btn_wrap.find('.num');
 
-            let i = 1;
+                let i = 1;
 
-            upBtn.addEventListener('click', () => {
-                i++;
-                num.innerHTML = i;
+                upBtn.on('click', () => {
+                    i++;
+                    num.text(i);
+                });
 
-            })
-
-            downBtn.addEventListener('click', () => {
-                i--;
-console.log(i)
-                if (i < 1) {
-                    i = 1;
-                }
-                num.innerHTML = i;
-            })
-        }
+                downBtn.on('click', () => {
+                    i--;
+                    if (i < 1) {
+                        i = 1;
+                    }
+                    num.text(i);
+                });
+            });
+        });
     </script>
 </head>
+
 <body>
     <div id="wrap">
         <header class="header" id="header">
             <div class=inner>
                 <h1>
                     <a href="#">
-                        <img src="img/아로마티카 로고.png" alt="아로마티카 로고"/>
+                        <img src="img/아로마티카 로고.png" alt="아로마티카 로고" />
                     </a>
                 </h1>
                 <nav class="pc_nav">
@@ -56,26 +55,26 @@ console.log(i)
                 </nav><!-- .pc_nav end -->
                 <div class="util">
                     <ul>
-                        <li><a href="#"><img src="img/icons8-사용자-24.png" alt=""/></a></li>
-                        <li><a href="#"><img src="img/icons8-수색-48.png" alt=""/></a></li>
+                        <li><a href="#"><img src="img/icons8-사용자-24.png" alt="" /></a></li>
+                        <li><a href="#"><img src="img/icons8-수색-48.png" alt="" /></a></li>
                     </ul>
                 </div><!-- .util end -->
 
                 <div class="mobile mobile_open">
                     <h3>
-                        <img src="img/menu.png" alt="메뉴 아이콘"/>
+                        <img src="img/menu.png" alt="메뉴 아이콘" />
                     </h3>
                 </div><!-- .mobile mobile_open end -->
 
                 <nav class="mobile mobile_nav">
-                <ul class="gnb">
-                    <li><a href="#">스킨케어</a></li>
-                    <li><a href="#">바디케어</a></li>
-                    <li><a href="#">헤어케어</a></li>
-                    <li><a href="#">홈케어</a></li>
-                    <li><a href="#">제로웨이스트</a></li>
-                </ul><!-- .gnb end -->
-            </nav>
+                    <ul class="gnb">
+                        <li><a href="#">스킨케어</a></li>
+                        <li><a href="#">바디케어</a></li>
+                        <li><a href="#">헤어케어</a></li>
+                        <li><a href="#">홈케어</a></li>
+                        <li><a href="#">제로웨이스트</a></li>
+                    </ul><!-- .gnb end -->
+                </nav>
             </div><!-- .inner end -->
         </header><!-- .header end -->
 
@@ -84,301 +83,308 @@ console.log(i)
                 <h1>Best 기획전</h1>
                 <p>아로마티카 공식몰에서 만날 수 있는 특별한 기획</p>
                 <div class="box_wrap">
-                <div class="item item_big">
-                    <a href="#">
-                    <figure>
-                        <img src="img/서렌 바디 바 라벤더&버가못.jpg" alt=""/>
-                    </figure>
-                    <div class="text">
-                        <h3>Serene Body Bar</h3>
-                        <p>Lavender & Bergamot</p>
-                    </a>
+                    <div class="item item_big">
+                        <a href="#">
+                            <figure>
+                                <img src="img/서렌 바디 바 라벤더&버가못.jpg" alt="" />
+                            </figure>
+                            <div class="text">
+                                <h3>Serene Body Bar</h3>
+                                <p>Lavender & Bergamot</p>
+                        </a>
                     </div><!-- .text end -->
                     <div class="more_btn">
                         <a href="#">
-                            <img src="img/more_btn.png" alt=""/>
+                            <img src="img/more_btn.png" alt="" />
                         </a>
                     </div><!-- .more_btn end -->
                 </div><!-- .item_big end -->
                 <div class="box">
-                <div class="item item_small">
-                    <a href="#">
-                    <figure>
-                        <img src="img/바이탈라이징 로즈마리 올인원 워시.jpg" alt=""/>
-                    </figure>
-                    <div class="text">
-                        <h3>All-In-One Wash</h3>
-                        <p>Vitalizing Rosemary</p>
-                    </a>
+                    <div class="item item_small">
+                        <a href="#">
+                            <figure>
+                                <img src="img/바이탈라이징 로즈마리 올인원 워시.jpg" alt="" />
+                            </figure>
+                            <div class="text">
+                                <h3>All-In-One Wash</h3>
+                                <p>Vitalizing Rosemary</p>
+                        </a>
                     </div><!-- .text end -->
                 </div><!-- .item_small -->
                 <div class="item item_small">
-                    <a href="#">
-                    <figure>
-                        <img src="img/리바이징 로즈.jpg" alt=""/>
-                    </figure>
-                    <div class="text">
-                        <h3>Infusion Cream</h3>
-                        <p>Reviving Rose</p>
-                    </a>
-                    </div><!-- .text end -->
-                </div><!-- .item_small -->
-            </div><!-- .box end -->
-        </div><!-- .box_wrap end -->
-            </div><!-- .inner end -->
-        </section><!-- .cont01 end -->
-
-        <section class="cont02">
-            <div class="inner">
-                <div class="title">
                     <a href="#">
                         <figure>
-                        <img src="img/서렌 바디로션 라벤더&마조람.jpg" alt=""/>
+                            <img src="img/리바이징 로즈.jpg" alt="" />
+                        </figure>
+                        <div class="text">
+                            <h3>Infusion Cream</h3>
+                            <p>Reviving Rose</p>
+                    </a>
+                </div><!-- .text end -->
+            </div><!-- .item_small -->
+    </div><!-- .box end -->
+    </div><!-- .box_wrap end -->
+    </div><!-- .inner end -->
+    </section><!-- .cont01 end -->
+
+    <section class="cont02">
+        <div class="inner">
+            <div class="title">
+                <a href="#">
+                    <figure>
+                        <img src="img/서렌 바디로션 라벤더&마조람.jpg" alt="" />
                     </figure>
                     <div>
                         <h3>MOST POPULAR</h3>
                         <p>Corporate Intranet Liaison</p>
                     </div>
-                    </a>
-                </div><!-- .title end -->
+                </a>
+            </div><!-- .title end -->
 
-                <div class="item small_item">
-                    <a href="#">
-                        <figure>
-                            <img src="img/멜로우니스 오일 인 바디워시 매그놀리아&샌달우드.jpg" alt=""/>
-                        </figure>
-                        <div>
-                            <p>MAGNOLIA & SANDALWOOD</p>
-                            <h4>body wash</h4>
-                        </div>
-                    </a>
-                </div><!-- .small_item end -->
-                <div class="item small_item">
-                    <a href="#">
-                        <figure>
-                            <img src="img/멜로우니스 오일 인 바디크림 매그놀리아.jpg" alt=""/>
-                        </figure>
-                        <div>
-                            <p>MELLOWNESS OIL IN</p>
-                            <h4>Body cream</h4>
-                        </div>
-                    </a>
-                </div><!-- .small_item end -->
+            <div class="item small_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/멜로우니스 오일 인 바디워시 매그놀리아&샌달우드.jpg" alt="" />
+                    </figure>
+                    <div>
+                        <p>MAGNOLIA & SANDALWOOD</p>
+                        <h4>body wash</h4>
+                    </div>
+                </a>
+            </div><!-- .small_item end -->
+            <div class="item small_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/멜로우니스 오일 인 바디크림 매그놀리아.jpg" alt="" />
+                    </figure>
+                    <div>
+                        <p>MELLOWNESS OIL IN</p>
+                        <h4>Body cream</h4>
+                    </div>
+                </a>
+            </div><!-- .small_item end -->
 
-                <div class="item big_item">
-                    <a href="#">
-                        <figure>
-                            <img src="img/리바이빙 로즈 세럼.jpg" alt=""/>
-                        </figure>
-                        <div>
-                            <p>Reviving Rose</p>
-                            <h4>Infusion serum</h4>
-                        </div>
-                    </a>
-                </div><!-- .big_item end -->
-                <div class="item big_item">
-                    <a href="#">
-                        <figure>
-                            <img src="img/스칼프 스케일링 샴푸.jpg" alt=""/>
-                        </figure>
-                        <div>
-                            <p>Rosemary Scalp</p>
-                            <h4>Scaling shampoo</h4>
-                        </div>
-                    </a>
-                </div><!-- .big_item end -->
-            </div><!-- .inner end -->
-        </section><!-- .cont02 end -->
+            <div class="item big_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/리바이빙 로즈 세럼.jpg" alt="" />
+                    </figure>
+                    <div>
+                        <p>Reviving Rose</p>
+                        <h4>Infusion serum</h4>
+                    </div>
+                </a>
+            </div><!-- .big_item end -->
+            <div class="item big_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/스칼프 스케일링 샴푸.jpg" alt="" />
+                    </figure>
+                    <div>
+                        <p>Rosemary Scalp</p>
+                        <h4>Scaling shampoo</h4>
+                    </div>
+                </a>
+            </div><!-- .big_item end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont02 end -->
 
-        <section class="cont03">
-            <div class="inner">
-                <h1>Hand care</h1>
-                <p>Give vitality to your dry hands</p>
-                <div class="list">
-                    <div class="item">
-                        <a href="#">
-                            <figure>
-                                <img src="img/임브레이스 핸드크림 네롤리&패츌리.jpg" alt=""/>
-                            </figure>
-                        </a>
-                        <div class="txt">
-                            <p>인텐시브 텍스쳐</p>
-                            <h4>서렌 핸드크림 라벤더 & 마조람</h4>
-                            <div class="price">
-                                <strong>11,000원</strong>
-                                <span class="cost">13,000원</span>
-                                <span class="discount">10%</span>
-                            </div><!-- .price end -->
-                        </div><!-- .txt end -->
-                        <div class="btn_wrap">
-                            <div class="btn">
-                                <button class="down">-</button>
-                                <span class="num">1</span>
-                                <button class="up">+</button>
-                            </div><!-- .btn end -->
-                
-                            <div class="icon">
-                                <img src="img/Favorite.png" alt="찜 버튼" />
-                                <img src="img/Shopping-bag.png" alt="장바구니 버튼" />
-                            </div><!-- .icon end -->
-                        </div><!-- .btn_wrap end -->
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <a href="#">
-                            <figure>
-                                <img src="img/인스피릿 핸드크림 바질&버가못.jpg" alt=""/>
-                            </figure>
-                        </a>
-                        <div class="txt">
-                            <p>벨베티 텍스쳐</p>
-                            <h4>인스피릿 핸드크림 바질 & 버가못</h4>
-                            <div class="price">
-                                <strong>11,000원</strong>
-                                <span class="cost">13,000원</span>
-                                <span class="discount">10%</span>
-                            </div><!-- .price end -->
-                        </div><!-- .txt end -->
-                        <div class="btn_wrap">
-                            <div class="btn">
-                                <button class="down">-</button>
-                                <span class="num">1</span>
-                                <button class="up">+</button>
-                            </div><!-- .btn end -->
-                
-                            <div class="icon">
-                                <img src="img/Favorite.png" alt="찜 버튼" />
-                                <img src="img/Shopping-bag.png" alt="장바구니 버튼" />
-                            </div><!-- .icon end -->
-                        </div><!-- .btn_wrap end -->
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <a href="#">
-                            <figure>
-                                <img src="img/멜로우니스 핸드크림 매그놀리아&샌달우드.jpg" alt=""/>
-                            </figure>
-                        </a>
-                        <div class="txt">
-                            <p>인텐시브 텍스쳐</p>
-                            <h4>임브레이스 핸드크림 네롤리 & 패츌리 30ML</h4>
-                            <div class="price">
-                                <strong>11,000원</strong>
-                                <span class="cost">13,000원</span>
-                                <span class="discount">10%</span>
-                            </div><!-- .price end -->
-                        </div><!-- .txt end -->
-                        <div class="btn_wrap">
-                            <div class="btn">
-                                <button class="down">-</button>
-                                <span class="num">1</span>
-                                <button class="up">+</button>
-                            </div><!-- .btn end -->
-                
-                            <div class="icon">
-                                <img src="img/Favorite.png" alt="찜 버튼" />
-                                <img src="img/Shopping-bag.png" alt="장바구니 버튼" />
-                            </div><!-- .icon end -->
-                        </div><!-- .btn_wrap end -->
-                    </div><!-- .item end -->
-                    <div class="item">
-                        <a href="#">
-                            <figure>
-                                <img src="img/서렌 핸드크림 마조람.jpg" alt=""/>
-                            </figure>
-                        </a>
-                        <div class="txt">
-                            <p>인텐시브 텍스쳐</p>
-                            <h4>서렌 핸드크림 라벤더 & 마조람 30ML</h4>
-                            <div class="price">
-                                <strong>11,000원</strong>
-                                <span class="cost">13,000원</span>
-                                <span class="discount">10%</span>
-                            </div><!-- .price end -->
-                        </div><!-- .txt end -->
-                        <div class="btn_wrap">
-                            <div class="btn">
-                                <button class="down">-</button>
-                                <span class="num">1</span>
-                                <button class="up">+</button>
-                            </div><!-- .btn end -->
-                
-                            <div class="icon">
-                                <img src="img/Favorite.png" alt="찜 버튼" />
-                                <img src="img/Shopping-bag.png" alt="장바구니 버튼" />
-                            </div><!-- .icon end -->
-                        </div><!-- .btn_wrap end -->
-                    </div><!-- .item end -->
-                </div><!-- .list end -->
-            </div><!-- .inner end -->
-        </section><!-- .cont03 end -->
+    <section class="cont03">
+        <div class="inner">
+            <h1>Hand care</h1>
+            <p>Give vitality to your dry hands</p>
+            <div class="list">
+                <div class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/임브레이스 핸드크림 네롤리&패츌리.jpg" alt="" />
+                        </figure>
+                    </a>
+                    <div class="txt">
+                        <p>인텐시브 텍스쳐</p>
+                        <h4>서렌 핸드크림 라벤더 & 마조람</h4>
+                        <div class="price">
+                            <strong>11,000원</strong>
+                            <span class="cost">13,000원</span>
+                            <span class="discount">10%</span>
+                        </div><!-- .price end -->
+                    </div><!-- .txt end -->
+                    <div class="btn_wrap">
+                        <div class="btn">
+                            <button class="down">-</button>
+                            <span class="num">1</span>
+                            <button class="up">+</button>
+                        </div><!-- .btn end -->
 
-        <section class="cont04">
-            <div class="inner">
-                <div class="round_item">
+                        <div class="icon">
+                            <img src="img/Favorite.png" alt="찜 버튼" />
+                            <img src="img/Shopping-bag.png" alt="장바구니 버튼" />
+                        </div><!-- .icon end -->
+                    </div><!-- .btn_wrap end -->
+                </div><!-- .item end -->
+                <div class="item">
                     <a href="#">
                         <figure>
-                            <img src="img/trial.jpg" alt=""/>
+                            <img src="img/인스피릿 핸드크림 바질&버가못.jpg" alt="" />
                         </figure>
                     </a>
-                    <p>트라이얼</p>
-                </div><!-- .round_item end -->
-                <div class="round_item">
-                    <a href="#">
-                        <figure>
-                            <img src="img/new.jpg" alt=""/>
-                        </figure>
-                    </a>
-                    <p>신제품</p>
-                </div><!-- .round_item end -->
-                <div class="round_item">
-                    <a href="#">
-                        <figure>
-                            <img src="img/best.jpg" alt=""/>
-                        </figure>
-                    </a>
-                    <p>베스트</p>
-                </div><!-- .round_item end -->
-                <div class="round_item">
-                    <a href="#">
-                        <figure>
-                            <img src="img/gift.jpg" alt=""/>
-                        </figure>
-                    </a>
-                    <p>기프트</p>
-                </div><!-- .round_item end -->
-                <div class="round_item">
-                    <a href="#">
-                        <figure>
-                            <img src="img/리츄어 헤어오일&우든브러쉬.jpg" alt=""/>
-                        </figure>
-                    </a>
-                    <p>기획전</p>
-                </div><!-- .round_item end -->
-            </div><!-- .inner end -->
-        </section><!-- .cont04 end -->
+                    <div class="txt">
+                        <p>벨베티 텍스쳐</p>
+                        <h4>인스피릿 핸드크림 바질 & 버가못</h4>
+                        <div class="price">
+                            <strong>11,000원</strong>
+                            <span class="cost">13,000원</span>
+                            <span class="discount">10%</span>
+                        </div><!-- .price end -->
+                    </div><!-- .txt end -->
+                    <div class="btn_wrap">
+                        <div class="btn">
+                            <button class="down">-</button>
+                            <span class="num">1</span>
+                            <button class="up">+</button>
+                        </div><!-- .btn end -->
 
-        <footer class="footer" id="footer">
-            <div class="footer_menu">
-                <ul>
-                    <a href=""><li>이용약관</li></a>
-                    <a href=""><li>개인정보처리방침</li></a>
-                    <a href=""><li>저작권안내</li></a>
-                </ul>
-            </div><!-- .footer_menu end -->
-            <div class="footer_info">
-                <h3>(주) 아로마티카</h3>
-                <ul>
-                    <li>고객센터 1600-3689</li>
-                    <li>이메일 sh.lee@aromatica.co.kr</li>
-                </ul>
-                <address>
+                        <div class="icon">
+                            <img src="img/Favorite.png" alt="찜 버튼" />
+                            <img src="img/Shopping-bag.png" alt="장바구니 버튼" />
+                        </div><!-- .icon end -->
+                    </div><!-- .btn_wrap end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/멜로우니스 핸드크림 매그놀리아&샌달우드.jpg" alt="" />
+                        </figure>
+                    </a>
+                    <div class="txt">
+                        <p>인텐시브 텍스쳐</p>
+                        <h4>임브레이스 핸드크림 네롤리 & 패츌리 30ML</h4>
+                        <div class="price">
+                            <strong>11,000원</strong>
+                            <span class="cost">13,000원</span>
+                            <span class="discount">10%</span>
+                        </div><!-- .price end -->
+                    </div><!-- .txt end -->
+                    <div class="btn_wrap">
+                        <div class="btn">
+                            <button class="down">-</button>
+                            <span class="num">1</span>
+                            <button class="up">+</button>
+                        </div><!-- .btn end -->
+
+                        <div class="icon">
+                            <img src="img/Favorite.png" alt="찜 버튼" />
+                            <img src="img/Shopping-bag.png" alt="장바구니 버튼" />
+                        </div><!-- .icon end -->
+                    </div><!-- .btn_wrap end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/서렌 핸드크림 마조람.jpg" alt="" />
+                        </figure>
+                    </a>
+                    <div class="txt">
+                        <p>인텐시브 텍스쳐</p>
+                        <h4>서렌 핸드크림 라벤더 & 마조람 30ML</h4>
+                        <div class="price">
+                            <strong>11,000원</strong>
+                            <span class="cost">13,000원</span>
+                            <span class="discount">10%</span>
+                        </div><!-- .price end -->
+                    </div><!-- .txt end -->
+                    <div class="btn_wrap">
+                        <div class="btn">
+                            <button class="down">-</button>
+                            <span class="num">1</span>
+                            <button class="up">+</button>
+                        </div><!-- .btn end -->
+
+                        <div class="icon">
+                            <img src="img/Favorite.png" alt="찜 버튼" />
+                            <img src="img/Shopping-bag.png" alt="장바구니 버튼" />
+                        </div><!-- .icon end -->
+                    </div><!-- .btn_wrap end -->
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont03 end -->
+
+    <section class="cont04">
+        <div class="inner">
+            <div class="round_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/trial.jpg" alt="" />
+                    </figure>
+                </a>
+                <p>트라이얼</p>
+            </div><!-- .round_item end -->
+            <div class="round_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/new.jpg" alt="" />
+                    </figure>
+                </a>
+                <p>신제품</p>
+            </div><!-- .round_item end -->
+            <div class="round_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/best.jpg" alt="" />
+                    </figure>
+                </a>
+                <p>베스트</p>
+            </div><!-- .round_item end -->
+            <div class="round_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/gift.jpg" alt="" />
+                    </figure>
+                </a>
+                <p>기프트</p>
+            </div><!-- .round_item end -->
+            <div class="round_item">
+                <a href="#">
+                    <figure>
+                        <img src="img/리츄어 헤어오일&우든브러쉬.jpg" alt="" />
+                    </figure>
+                </a>
+                <p>기획전</p>
+            </div><!-- .round_item end -->
+        </div><!-- .inner end -->
+    </section><!-- .cont04 end -->
+
+    <footer class="footer" id="footer">
+        <div class="footer_menu">
+            <ul>
+                <a href="">
+                    <li>이용약관</li>
+                </a>
+                <a href="">
+                    <li>개인정보처리방침</li>
+                </a>
+                <a href="">
+                    <li>저작권안내</li>
+                </a>
+            </ul>
+        </div><!-- .footer_menu end -->
+        <div class="footer_info">
+            <h3>(주) 아로마티카</h3>
+            <ul>
+                <li>고객센터 1600-3689</li>
+                <li>이메일 sh.lee@aromatica.co.kr</li>
+            </ul>
+            <address>
                 <p>서울 강남구 강남대로162길 41-4</p>
-                <p>사업자등록번호  214-86-75782 </p>
+                <p>사업자등록번호 214-86-75782 </p>
                 <p>대표 Kim Young Kyun </p>
-                </address>
-            </div><!-- .footer_info end -->
-            <p>© 2023 AROMATICA All rights reserved. In God we trust.</p>
-        </footer><!-- .footer end -->
-        </div><!-- #wrap end -->
-    
+            </address>
+        </div><!-- .footer_info end -->
+        <p>© 2023 AROMATICA All rights reserved. In God we trust.</p>
+    </footer><!-- .footer end -->
+    </div><!-- #wrap end -->
+
 </body>
+
 </html>
