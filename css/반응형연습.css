@@ -434,12 +434,18 @@ li {
     border: 1px solid #333;
 }
 
-.cont03 .inner .list .item .icon {
+.cont03 .inner .list .item .icon_wrap {
+    display: flex;
     margin-left: 1rem;
+}
+
+.cont03 .inner .list .item .icon {
+    padding: 0 5px;
 }
 
 .cont03 .inner .list .item .icon img {
     height: 25px;
+    vertical-align: middle;
 }
 
 /* ======================cont04⭐ */
